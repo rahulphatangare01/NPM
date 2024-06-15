@@ -1,0 +1,1 @@
+NPM, which stands for Node Package Manager, is a package manager for JavaScript and the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client (CLI) and an online database of public and private packages, known as the NPM registry. Here's a detailed breakdown of NPM:
