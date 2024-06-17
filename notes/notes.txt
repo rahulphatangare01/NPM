@@ -1,0 +1,13 @@
+Point to be cover in this series.
+
+1. NPX
+2. Peer depndancy 
+3. NPM clean install 
+4. NPM workspace
+
+
+build and publish an NPM package 
+1. Create the base class.
+2. Test it by installing from disk
+3. instance a local NPM registry
+4. Migrate this to typescript.
