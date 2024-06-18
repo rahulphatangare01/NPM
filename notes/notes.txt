@@ -11,3 +11,9 @@ build and publish an NPM package
 2. Test it by installing from disk
 3. instance a local NPM registry
 4. Migrate this to typescript.
+
+NPM security and other features
+1. NPM audint
+2. Security best practices
+3. c++ addons
+4. NPM alternatives like yarn and pnpm.
