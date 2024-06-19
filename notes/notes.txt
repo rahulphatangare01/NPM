@@ -17,3 +17,17 @@ NPM security and other features
 2. Security best practices
 3. c++ addons
 4. NPM alternatives like yarn and pnpm.
+
+
+
+------------------------------
+ what is NPM ? 
+  - Package manager for Javascript 
+      1. fetch packages from a registry.
+      2. Organizes dependancy
+      3. handles scripts
+  - Generates .lock file
+      1. handels version, updates packages
+      2. can install global packages
+      3. Assists in creating and publishing packages.
+      4. building security tool
