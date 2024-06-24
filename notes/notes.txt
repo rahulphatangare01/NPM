@@ -32,3 +32,7 @@ NPM security and other features
       3. Assists in creating and publishing packages.
       4. building security tool
        
+
+NPM Scripts:-
+    In Scripts we get some pre determine script for application run, stop, like this 
+    but we can also add our own custom scripts commands for application . 
