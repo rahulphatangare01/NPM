@@ -1,0 +1,76 @@
+ Dependencies:- 
+
+
+Module System:- 
+          1. CommonJS Modules
+          2. ECMAScript (ESM) Modules
+
+
+    1. CommonJS Modules
+     
+     EX:- 
+       const uuid = require('uuid');
+       console.log("here is a random string: " + uuid.v4( ))
+
+    2. ECMAScript (ESM) Modules
+     Ex:- 
+        import {v4} from "uuid"'
+        console.log('here is a random string: ' + v4( ))
+    
+    NOTE:- 
+       1.  CommonJS Module are the tradintional approch in node js, Offering synchronus loading nd familar
+        require() / module.exports syntax.
+       2.  ESM modules are the modern standards, providing asynchronus loading and a clener import/export syntax, but with some
+           differents in caching and lack of certain built in variables.
+
+
+-------------------------------------------------------------------------
+Dependency:-
+     1. Development Dependencies
+          
+            - These Dependanciesspecifically needed during the development process, but NOT Required for the application run.
+                For Ex:- 
+                    Building,
+                    testing,
+                    linting,
+                    code formatting
+                    (e.g., Webpack, Jest, ESLint, Prettier)
+
+
+            - Module Bundler :- In React and Angular mostly use Web-Pack. Web-Pack is bundler another one is rollup bundler.
+                --  Module Bundling:- 
+                            Bundling is the process of resolving the web of Dependancies and merging (or 'packaging') the
+                            files (or modules) into optimized bundles.
+                    Bundling 
+                            -- To run inside a browser.
+                            when we create npm package its nor directly run inside the browser for this we need bundler 
+                            we can check which bundler is now trending using https://npmtrends.com/ using this web-site
+                            for bulde the package we can do in script 
+
+                    coomand Scripts :--- "build":"esbuild index.js --bundle --outfile=dist/out.js"
+                                    "build-browser":"esbuild index.js --bundle --outfile=dist/out.js"
+                                    "build-node": "esbuild index.js --bundle --platform=node --outfile=dist/out.cjs"
+                                    "build-all": :"npm run build-browser && npm run build-node"
+                    - Commands :-
+                        npm install dependancy-name --save-dev 
+                            for Ex:- npm install esbuild --save-dev  
+
+
+
+         
+    2. Global-Dependencies:-
+                       Global Dependancies are install in not for application but its for system 
+                            
+           Command for check global dependencies 
+                 npm list -g
+             if we want to check dependencies Dependency
+                npm list -depth=1
+    
+           Semantic Versioning
+           version:"1.0.1"
+                     lastone is for patch number for bug fixes
+                     middle one is Minor version for new features,
+                     first one is Major version Braking changes,
+                     
+
+

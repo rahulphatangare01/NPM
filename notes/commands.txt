@@ -1,4 +1,6 @@
 common comands:
   1. npm --version   ------- Check npm version 
   2. npm i -g npm@latest --- install latest version of NPM
-  3.
+  
+  Development Dependancy:- 
+      1. npm install <Dependancy-Name> --save-dev
