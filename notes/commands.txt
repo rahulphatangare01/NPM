@@ -7,3 +7,19 @@ common comands:
     
   Peer Dependancy :- 
       1. npm install --save-peer
+
+  Clean Install for productoin 
+      npm clean install   <it will install clean depenacy for production depenacy and supported depenacy>
+   
+  Production required depndancy 
+      npm i --omit=dev    <it will install depndancy also dev depndancy>
+      npm i --omit        < it will install depenacy for production>
+      npm i npm prune --production    <it will install only Dependancy not dev depenacy or peer depenacy>
+
+
+
+  NPm Update 
+      npm outdated         <it will show the list outdated packages list>
+      npm update --save   < it will update dependacy >
+
+

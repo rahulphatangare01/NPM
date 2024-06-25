@@ -38,7 +38,7 @@ NPM Scripts:-
     but we can also add our own custom scripts commands for application . 
 
 
-
+---------------------------------------------------------------------------------------
 -----NPX and NPM EXEC --------
     NPX node package manager
        Directly execute node packages
@@ -49,3 +49,37 @@ NPM Scripts:-
           npm exec is command work outside the application
     npm exec  
          just like npx, with a slight differnet in the way we pass arguments.
+
+-------------------------------------------------------------------------------------
+Production shipping 
+
+        MPLM  install inside the node project using the same packages JSON file lead to other may lead.
+        MPLM cleaning stall will reinstall you node modules to make sure that it comes fresh.
+        Command :- 
+                   npm clean install
+
+             only install our Dependancies and as you can see is built is not right here 
+             It will only install our dependencies require dependacy
+
+        Command :-
+                npm i --omit=dev
+
+             There is another command that we might use is called MPM prune and this command can remove certain package.
+        Command :- 
+               npm prune --production 
+                  this command only keep dependancy not dev dependacy or peer depenacy in productoin.
+
+-------------------------------------------------------------------------------------------
+ NPM updates
+            Check outdated package in application 
+        Command :-
+                  npm outdated
+                    this will show the outdated packages list. 
+
+             update Dependency in Application 
+        Command :- 
+                 npm update --save
+
+
+---------------------------------------------------------------------------------------------
+Creating NPM Package 

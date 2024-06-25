@@ -80,7 +80,8 @@ Dependency:-
 
          Command for install Peer Dependency 
                 npm install --save-peer
-
+         
+                 
 
                                       
 
