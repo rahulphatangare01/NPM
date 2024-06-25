@@ -36,3 +36,16 @@ NPM security and other features
 NPM Scripts:-
     In Scripts we get some pre determine script for application run, stop, like this 
     but we can also add our own custom scripts commands for application . 
+
+
+
+-----NPX and NPM EXEC --------
+    NPX node package manager
+       Directly execute node packages
+
+      command for check NPX version 
+          npm --version 
+
+          npm exec is command work outside the application
+    npm exec  
+         just like npx, with a slight differnet in the way we pass arguments.

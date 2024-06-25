@@ -71,6 +71,17 @@ Dependency:-
                      lastone is for patch number for bug fixes
                      middle one is Minor version for new features,
                      first one is Major version Braking changes,
-                     
+
+                    
+    3. Peer Dependancies :-
+                   peer dependancy is the dependacy is depened on you installed dependacy 
+                        Suppose we install Axios but internally Axios is using some dependeny that dependacy called as Peer dependancy
+        
+
+         Command for install Peer Dependency 
+                npm install --save-peer
+
+
+                                      
 
 

@@ -4,3 +4,6 @@ common comands:
   
   Development Dependancy:- 
       1. npm install <Dependancy-Name> --save-dev
+    
+  Peer Dependancy :- 
+      1. npm install --save-peer
