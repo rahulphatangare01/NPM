@@ -100,3 +100,23 @@ Creating NPM Package
 
 -------------------------------------------------------------------------------------------
 NPM Security 
+    npm audit 
+          npm audit mostly used for check packages issue its showing major and minor issue in packages.
+      Command for fix audit issue
+        Command:-  npm audit fix --force
+
+NPM post install
+
+       in package.json script added postinstall
+        we can also ignore malicious packages 
+          comands :-  --igonre-scripts  
+
+NPM Security other consern 
+      1. typosquantting
+              mimic popular packages. also a problem in Python or Ruby,
+            It means that some malicious developer can mimic differnt packages and add some functionality.
+           Command for check 
+               npm outdated
+               npm doctor
+         Also we can add private: "true" in package json package file,      
+------------------------------------------------------------------------------------------
