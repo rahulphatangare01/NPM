@@ -83,3 +83,20 @@ Production shipping
 
 ---------------------------------------------------------------------------------------------
 Creating NPM Package 
+     for creating NPM package we can use typescript or javascript
+      -- local package also develop using  entry file  path on package to to the application 
+       Command:-  npm instasll <Path of this package> 
+     -- Private Registry  
+         NPM is public registry,
+         Command: npm get registry   <command for check npm registry>
+
+        Some private registry -- verdaccio
+                                AWS code Artifact  
+     for build package we need to command for package 
+       1. build package 
+           comands :- npm run build or npm run dev 
+       2. publish package 
+          comands :- npm publish
+
+-------------------------------------------------------------------------------------------
+NPM Security 
