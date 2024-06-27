@@ -120,3 +120,14 @@ NPM Security other consern
                npm doctor
          Also we can add private: "true" in package json package file,      
 ------------------------------------------------------------------------------------------
+NPM Features.
+            Npm Watch 
+                    for run file in watch mode.
+                    also check changes in project using start or stop.
+                in package.json file in script  in start command added "--watch"    
+
+            Npm and git 
+             npm popular package lodash
+           Remove NPM packages
+            command for kill (delete ) node modules in multiple application 
+          Command:-   npx npkill
