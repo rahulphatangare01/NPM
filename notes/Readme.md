@@ -43,3 +43,5 @@ PATCH: Backward-compatible bug fixes.
 
 10. NPM Alternatives
     While NPM is the default package manager for Node.js, there are alternatives such as Yarn and PNPM. These alternatives offer similar functionalities with some variations in performance, features, and workflows.
+
+## NPM Interview Questions.
