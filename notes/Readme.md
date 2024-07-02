@@ -45,3 +45,8 @@ PATCH: Backward-compatible bug fixes.
     While NPM is the default package manager for Node.js, there are alternatives such as Yarn and PNPM. These alternatives offer similar functionalities with some variations in performance, features, and workflows.
 
 ## NPM Interview Questions.
+
+1.  Dependency Tree and conflict Resolution:
+    - Explain how NPM manages dependency trees, including version ranges and nested dependencies.
+    - Discuss common scenarios for dependency conflicts and strategies for resolving them (e.g., using npm dedupe, peer dependencies, or selective versioning).
+    - How might you leverage tools like npm ls or npm outdated to identify and understand dependency conflicts?
