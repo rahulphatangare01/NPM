@@ -46,7 +46,20 @@ PATCH: Backward-compatible bug fixes.
 
 ## NPM Interview Questions.
 
-1.  Dependency Tree and conflict Resolution:
+### 1. Dependency Tree and conflict Resolution:
+
     - Explain how NPM manages dependency trees, including version ranges and nested dependencies.
     - Discuss common scenarios for dependency conflicts and strategies for resolving them (e.g., using npm dedupe, peer dependencies, or selective versioning).
     - How might you leverage tools like npm ls or npm outdated to identify and understand dependency conflicts?
+
+### 2. Advanced Scripting:
+
+    - Create an NPM script to automate a complex build process, including tasks like code linting, unit testing, code coverage generation, and deployment.
+    - Explain how you would handle errors and failures gracefully within these scripts, using flags or environment variables for customization.
+    - Discuss the benefits of using tools like husky to integrate these scripts into your Git workflow.
+
+### 3. Private Repositories and Versioning Strategies:
+
+    - Describe the different approaches to managing private NPM repositories (e.g., using a private registry server or access controls within a public registry).
+    - Compare and contrast the use of semantic versioning (semver) and other versioning strategies in private package development.
+    - How would you handle situations where a private package requires a breaking change while maintaining compatibility with existing consumers?
