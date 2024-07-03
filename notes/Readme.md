@@ -63,3 +63,43 @@ PATCH: Backward-compatible bug fixes.
     - Describe the different approaches to managing private NPM repositories (e.g., using a private registry server or access controls within a public registry).
     - Compare and contrast the use of semantic versioning (semver) and other versioning strategies in private package development.
     - How would you handle situations where a private package requires a breaking change while maintaining compatibility with existing consumers?
+
+### 4. Publishing Custom Scopes:
+
+    - Explain the concept of NPM scopes and their benefits for organizing packages within your organization or project.
+    - Discuss the process of creating and publishing packages under a custom scope, including considerations for access control and versioning.
+    - How might you leverage tools like npm whoami and npm owner to manage ownership and permissions?
+
+### 5. ublishing Monorepos:
+
+    - Describe the concept of monorepos and their advantages for managing multiple related packages within a single codebase.
+    - Explain how NPM can be used to publish a monorepo, considering tools like lerna or turbo for efficient monorepo management.
+    - Discuss the challenges of managing dependencies and versioning within a monorepo structure.
+
+### 6. Creating Custom NPM Publish Scripts:
+
+    - Develop an NPM script that performs pre-publish checks, such as code linting, unit testing, and version validation, before publishing a package.
+    - Explore ways to integrate this script into your CI/CD pipeline to automate these checks and ensure quality before publishing.
+
+### 7. Advanced Security Considerations:
+
+    - Discuss best practices for securing NPM packages, including dependency vulnerability scanning tools and strategies for mitigating vulnerabilities.
+    - How would you configure multi-factor authentication (MFA) for your NPM account to enhance security?
+    - Explain the role of dependency auditing tools (e.g., npm audit or snyk) in identifying potential security risks.
+
+### 8. Alternative Package Managers (APMs):
+
+    - Compare and contrast NPM with other popular APMs like Yarn or pnpm, highlighting their strengths and weaknesses in different scenarios.
+    - When might you choose a different APM over NPM, and what are some key factors to consider?
+
+### 9. NPM Caching and Performance Optimization:
+
+    - Describe strategies for optimizing NPM package installation performance, including the use of caching mechanisms.
+    - How might you leverage tools like npm cache clean or npm config set cache <path> to manage NPM's cache?
+    - Discuss the trade-offs between local and remote caching, and how to choose the appropriate approach for your needs.
+
+### 10. Community Engagement and Best Practices:
+
+    - Discuss how you contribute to the NPM community, such as reporting bugs, creating or using open-source packages, or participating in discussions.
+    - Explain your understanding of best practices for writing high-quality NPM packages, including documentation, maintainability, and adherence to semver.
+    - How do you stay updated on the latest NPM features and best practices?
