@@ -103,3 +103,19 @@ PATCH: Backward-compatible bug fixes.
     - Discuss how you contribute to the NPM community, such as reporting bugs, creating or using open-source packages, or participating in discussions.
     - Explain your understanding of best practices for writing high-quality NPM packages, including documentation, maintainability, and adherence to semver.
     - How do you stay updated on the latest NPM features and best practices?
+
+## Medium-Level
+
+### 1. Package Installation and Usage:
+
+    - Install an NPM package and explain how to import and use its functionality within your project.
+    - Demonstrate the difference between local package installation (npm install <package-name>) and    global installation (npm install -g <package-name>).
+    - Explain the role of the node_modules directory in your project.
+
+### 2. Dependency Management:
+
+    - Describe the process of declaring dependencies in your package.json file and specifying version ranges.
+    - How does NPM handle situations where multiple packages have conflicting dependencies?
+    - Explain the concept of peer dependencies and how they resolve dependency conflicts.
+
+### 3.
