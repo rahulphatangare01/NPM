@@ -57,5 +57,9 @@ To forcefully update to the latest versions, you can use:
 
 ```javascript
 npm install <package_name>@latest
-
 ```
+
+### 6. Explain the difference between dependencies and devDependencies.
+
+**dependencies**: These are the packages required for the application to run. They are specified in the `dependencies` section of `package.json` and are installed when running `npm install`.
+**devDependencies**: These are the packages needed only for development (e.g., testing frameworks, build tools). They are specified in the devDependencies section of `package.json` and can be installed using `npm install --save-dev`
