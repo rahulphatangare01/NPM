@@ -97,3 +97,140 @@ To link a package, navigate to the package directory and run:
 ```javascript
 npm link
 ```
+
+## Advance Level Questions
+
+### 1. How does npm handle version conflicts when two packages depend on different versions of the same dependency?
+
+npm uses a nested dependency tree to handle version conflicts. When two packages depend on different versions of the same dependency, npm installs each version in a way that satisfies both packages. If the versions are incompatible, npm will install multiple versions of the dependency, each in its own node_modules directory within the respective package directory that requires it.
+
+### 2. What is the purpose of `package-lock.json` and how does it differ from `package.json`?
+
+`package-lock.json` is automatically generated and updated by npm. It ensures that the exact version of every installed package is recorded, providing a snapshot of the entire dependency tree. This file guarantees that subsequent installations produce the same dependency tree, ensuring reproducibility across different environments.
+
+`package.json` specifies the project's metadata and dependency ranges, but package-lock.json captures the exact versions of all dependencies, making sure the installed dependencies are consistent.
+
+### 3. How can you create and publish a private package to npm?
+
+To create and publish a private package to npm, you need an npm account with access to private package publishing. In your package.json, set the private field to true:
+
+```javscript
+{
+  "name": "my-private-package",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js"
+}
+```
+
+Then, log in to your npm account using:
+
+```javascript
+npm login
+```
+
+Finally, publish the package:
+
+```javascript
+npm publish --access restricted
+```
+
+### 4. What is the `npm shrinkwrap` command and when would you use it?
+
+`npm shrinkwrap` generates a `npm-shrinkwrap.json` file, which locks down the dependency tree similarly to `package-lock.json`, but is used explicitly to share the dependency tree with end users. It ensures that the exact versions of dependencies are installed.
+
+You would use `npm shrinkwrap` for projects where you need to ensure a specific, reproducible set of dependencies, particularly for deployed applications where consistency is critical.
+
+### 5. Explain the differences between npm and yarn.
+
+**Performance**: Yarn is generally faster than npm due to its parallel installation process and caching mechanism.
+**Deterministic Installs**: Yarn uses a yarn.lock file to ensure deterministic dependency resolution, similar to npm's package-lock.json, but Yarn was designed with this feature from the start.
+**Offline Mode**: Yarn can install dependencies offline if they have been installed previously.
+**Security**: Yarn checks for integrity using checksums to ensure that installed packages haven't been tampered with.
+**Monorepo Support**: Yarn has built-in support for managing monorepos using workspaces, whereas npm added similar features later.
+
+### 6. How do you handle scoped packages in npm?
+
+Scoped packages are a way to group related packages under a common namespace. A scoped package name starts with @, followed by the scope name and a slash, and then the package name.
+
+To install a scoped package:
+
+```javascript
+npm install @scope/package-name
+```
+
+To publish a scoped package, you need to ensure the name field in package.json includes the scope:
+
+```javascript
+{
+  "name": "@scope/package-name",
+  "version": "1.0.0"
+}
+```
+
+Then, publish it using:
+
+```javascript
+npm publish --access public
+```
+
+Or for private scoped packages:
+
+```javascript
+npm publish --access restricted
+```
+
+### 7. What is the role of `npx` in the npm ecosystem?
+
+`npx` is a tool that comes with npm (version 5.2.0 and later) that allows you to execute binaries from npm packages without installing them globally. It simplifies running commands from locally or remotely installed packages.
+
+For example, to run the create-react-app command without installing it globally:
+
+```javascript
+npx create-react-app my-app
+```
+
+### 8. How do you configure npm to use a different registry?
+
+You can configure npm to use a different registry by running the following command:
+
+```javascript
+npm config set registry <registry_url>
+```
+
+To reset to the default registry:
+
+```javascript
+npm config delete registry
+```
+
+### 9. What are peer dependencies and how are they different from regular dependencies?
+
+Peer dependencies are a way to specify that a package depends on a certain version of another package, but it does not directly include it in its dependencies. Instead, the consuming project must install the specified version.
+
+This is useful for plugins or libraries that need to ensure compatibility with a particular version of a framework or library used by the parent project.
+
+In `package.json`, peer dependencies are defined like this:
+
+```javascript
+{
+  "peerDependencies": {
+    "react": "^16.0.0"
+  }
+}
+
+```
+
+### 10. How can you audit and fix vulnerabilities in your npm packages?
+
+npm provides a built-in tool to audit and fix vulnerabilities in your project's dependencies. To audit your packages, run:
+
+```javascript
+npm audit
+```
+
+This command will output a list of vulnerabilities found in your project. To fix these vulnerabilities, you can use:
+
+```javascript
+npm audit fix
+```
