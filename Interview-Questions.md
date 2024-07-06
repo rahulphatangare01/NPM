@@ -63,3 +63,37 @@ npm install <package_name>@latest
 
 **dependencies**: These are the packages required for the application to run. They are specified in the `dependencies` section of `package.json` and are installed when running `npm install`.
 **devDependencies**: These are the packages needed only for development (e.g., testing frameworks, build tools). They are specified in the devDependencies section of `package.json` and can be installed using `npm install --save-dev`
+
+### 7. How can you prevent installing optional dependencies?
+
+To prevent installing optional dependencies, you can use the `--no-optional` flag with the `npm install` command.
+
+```javascript
+npm install --no-optional
+```
+
+### 8. What is the purpose of npm ci, and how is it different from npm install?
+
+`npm ci` (continuous integration) is used to install dependencies from the `package-lock.json` file.
+It ensures a clean slate by removing the existing `node_modules` directory and installing
+dependencies exactly as specified in `package-lock.json`. This guarantees reproducible builds.
+
+In contrast, npm install installs dependencies based on `package.json` and updates the `package-lock.json` file if there are changes in the dependency tree.
+
+### 9. How do you uninstall a package?
+
+To uninstall a package, use the npm uninstall command followed by the package name.
+
+```javascript
+npm uninstall <package_name>
+```
+
+### 10. What is the npm link command used for?
+
+`npm link` is used to symlink a package folder. It allows you to develop a package locally and use it in other projects without needing to publish it to the npm registry. This is useful for development and testing.
+
+To link a package, navigate to the package directory and run:
+
+```javascript
+npm link
+```
