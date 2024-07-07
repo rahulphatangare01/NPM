@@ -234,3 +234,139 @@ This command will output a list of vulnerabilities found in your project. To fix
 ```javascript
 npm audit fix
 ```
+
+### 11. How does npm handle transitive dependencies, and what tools can you use to inspect them?
+
+npm handles transitive dependencies by recursively resolving and installing all the dependencies required by a package and its dependencies. This creates a nested structure within the `node_modules` directory.
+
+To inspect transitive dependencies, you can use the `npm ls` command, which provides a hierarchical view of all installed packages and their dependencies:
+
+```javascript
+npm ls
+```
+
+### 12. How can you optimize the size of your node_modules directory?
+
+To optimize the size of your `node_modules` directory:
+
+**Remove unnecessary dependencies**: Regularly audit and remove unused packages.
+**Use the npm dedupe command**: This will reduce duplication by placing dependencies at the highest level possible.
+
+```javascript
+npm dedupe
+```
+
+**Configure .npmrc to use a smaller set of installed files**: Create a .npmrc file with the following configuration to exclude unnecessary files:
+
+```javascript
+save-exact=true
+production=true
+```
+
+**Use package bundlers**: Tools like Webpack or Rollup can help bundle your application and minimize the number of required dependencies.
+
+### 13. Explain the purpose and benefits of npm workspaces.
+
+npm workspaces are a set of features in npm that allow managing multiple packages within a single repository. This is particularly useful for monorepos, where multiple packages share common dependencies and tooling.
+
+Benefits of npm workspaces include:
+
+**Centralized management**: Manage dependencies and scripts for multiple packages from a single package.json file.
+**Efficiency**: Share dependencies across packages, reducing redundancy and installation times.
+**Consistency**: Ensure all packages use the same versions of dependencies.
+**Simplified development**: Run scripts across multiple packages with a single command.
+
+To set up workspaces, add a workspaces field in the root `package.json`:
+
+```javascript
+{
+  "workspaces": [
+    "packages/*"
+  ]
+}
+```
+
+### 14. How can you handle environment-specific configurations in npm scripts?
+
+To handle environment-specific configurations in npm scripts, you can use environment variables. These can be defined inline in the script or through external configuration files.
+
+```javascript
+{
+  "scripts": {
+    "start:dev": "NODE_ENV=development node app.js",
+    "start:prod": "NODE_ENV=production node app.js"
+  }
+}
+```
+
+Using external configuration files like `.env` (with the help of a package like `dotenv`):
+Install dotenv:
+
+```javascript
+npm install dotenv
+```
+
+Create a `.env` file with your environment variables:
+
+```javascript
+NODE_ENV = development;
+```
+
+Load the variables in your application code:
+
+```javascript
+require("dotenv").config();
+```
+
+Define npm scripts:
+
+```javascript
+{
+  "scripts": {
+    "start": "node app.js"
+  }
+}
+```
+
+### 15. How can you create a custom npm command and distribute it?
+
+To create a custom npm command, you need to create a Node.js script and define it in the `bin` field of your `package.json`.
+
+Create the script (e.g., cli.js):
+
+```javascript
+#!/usr/bin/env node
+console.log("Hello, this is my custom npm command!");
+```
+
+Make the script executable:
+
+```javascript
+chmod +x cli.js
+```
+
+Define the command in package.json:
+
+```javascript
+{
+  "name": "my-custom-command",
+  "version": "1.0.0",
+  "bin": {
+    "my-command": "./cli.js"
+  }
+}
+
+```
+
+Publish the package to npm:
+
+```javascript
+npm publish
+```
+
+Users can then install and run your custom command:
+
+```javascript
+npm install -g my-custom-command
+my-command
+```
