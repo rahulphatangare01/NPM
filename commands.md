@@ -48,3 +48,7 @@ Runs a script defined in the `scripts` section of `package.json`.
 npm run <script_name> # runs a specific script
 npm run # lists all available scripts
 ```
+
+# NPM Advanced Commands
+
+### 6. `npm ci`
