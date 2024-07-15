@@ -2,10 +2,10 @@ common comands:
   1. npm --version   ------- Check npm version 
   2. npm i -g npm@latest --- install latest version of NPM
   
-  Development Dependancy:- 
+  1.Development Dependancy:- 
       1. npm install <Dependancy-Name> --save-dev
     
-  Peer Dependancy :- 
+  2. Peer Dependancy :- 
       1. npm install --save-peer
 
   Clean Install for productoin 
